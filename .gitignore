@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# output of the CLI, the examples and the tools
+preview.png
+label.png
+previews/
+mock_sessions/
+diag_logs/

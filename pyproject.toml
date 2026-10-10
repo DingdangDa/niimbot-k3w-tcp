@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "niimbot-k3w-tcp"
+version = "0.1.0"
+description = "Print text, Chinese, QR codes and images to a NIIMBOT K3_W network label printer over TCP port 9100"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+dependencies = ["Pillow>=8.0"]
+keywords = ["niimbot", "label printer", "thermal printer", "k3", "qr code", "tcp", "wifi"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Printing",
+    "Natural Language :: Chinese (Simplified)",
+]
+
+[project.optional-dependencies]
+qr = ["qrcode>=7"]
+test = ["pytest>=7", "qrcode>=7"]
+
+[project.scripts]
+niimbot-k3w = "niimbot_k3w:main"
+
+[tool.setuptools]
+py-modules = ["niimbot_k3w"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
